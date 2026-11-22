@@ -348,10 +348,10 @@ export const MirageModal: FC<MirageModalProps> = ({
                   className="p-3.5 bg-rose-50 text-rose-900 rounded-xl border border-rose-300 shadow-sm space-y-1 font-body"
                 >
                   <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-rose-800">
-                    <AlertOctagon className="w-4 h-4 text-rose-600 shrink-0" />
+                    <AlertOctagon className="size-4 text-rose-600 shrink-0" />
                     <span>FAIL-CLOSED ZERO-TRUST CONTAINMENT: EMERGENCY REJECTION ALERT</span>
                   </div>
-                  <p className="text-xs text-rose-700 leading-snug">
+                  <p className="text-xs text-rose-700 leading-snug text-pretty">
                     Zero-trust safety threshold breached ({isThermalDangerZone ? "Holding in 21°C–31°C microbial danger zone" : ""} {isSealCompromised ? "• Vessel seal compromised" : ""} {isMicrobialCritical ? "• 4-Hour microbial proliferation window exceeded" : ""}). Batch quarantined. Dispatch lock active. Diverting to BBMP Municipal Bio-Compost Facility.
                   </p>
                 </div>
@@ -360,7 +360,7 @@ export const MirageModal: FC<MirageModalProps> = ({
               {/* Spectral Visual Mode Switcher Header Bar */}
               <div className="flex items-center justify-between gap-2 flex-wrap pb-1 border-b border-stone-200">
                 <div className="flex items-center gap-1.5 text-xs font-label text-stone-700 font-bold">
-                  <Layers className="w-3.5 h-3.5 text-emerald-700" />
+                  <Layers className="size-3.5 text-emerald-700" />
                   <span>SPECTRAL VISUAL MODE:</span>
                 </div>
                 <div
@@ -456,11 +456,11 @@ export const MirageModal: FC<MirageModalProps> = ({
                       data-testid="spot-sensor-core"
                     >
                       <div className="relative flex items-center justify-center">
-                        <span className="w-6 h-6 rounded-full border-2 border-white/90 animate-ping absolute opacity-50" />
-                        <span className="w-4 h-4 rounded-full border-2 border-white bg-red-600 shadow-md flex items-center justify-center text-[9px] text-white font-bold leading-none">
+                        <span className="size-6 rounded-full border-2 border-white/90 animate-ping absolute opacity-50" />
+                        <span className="size-4 rounded-full border-2 border-white bg-red-600 shadow-md flex items-center justify-center text-[9px] text-white font-bold leading-none">
                           +
                         </span>
-                        <div className="absolute top-5 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-0.5 rounded bg-black/90 text-white font-mono text-[10px] font-bold border border-white/30 shadow-md">
+                        <div className="absolute top-5 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-0.5 rounded bg-black/90 text-white font-mono text-[10px] font-bold border border-white/30 shadow-md tabular-nums">
                           CORE: {thermography.core_temp_c.toFixed(1)}°C
                           <span className="block text-[8px] font-semibold text-amber-300">
                             {isHotHoldCompliant ? ">65°C HOT HOLD" : isColdHoldCompliant ? "<4°C COLD HOLD" : "21-31°C DANGER ZONE"}
@@ -475,10 +475,10 @@ export const MirageModal: FC<MirageModalProps> = ({
                       data-testid="spot-sensor-surface"
                     >
                       <div className="relative flex items-center justify-center">
-                        <span className="w-3.5 h-3.5 rounded-full border border-white/80 bg-amber-500 shadow-md flex items-center justify-center text-[8px] text-white font-bold leading-none">
+                        <span className="size-3.5 rounded-full border border-white/80 bg-amber-500 shadow-md flex items-center justify-center text-[8px] text-white font-bold leading-none">
                           +
                         </span>
-                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap px-1.5 py-0.5 rounded bg-black/85 text-stone-200 font-mono text-[9px] font-semibold border border-white/20">
+                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap px-1.5 py-0.5 rounded bg-black/85 text-stone-200 font-mono text-[9px] font-semibold border border-white/20 tabular-nums">
                           SURF: {thermography.surface_temp_c.toFixed(1)}°C
                         </div>
                       </div>
@@ -490,10 +490,10 @@ export const MirageModal: FC<MirageModalProps> = ({
                       data-testid="spot-sensor-ambient"
                     >
                       <div className="relative flex items-center justify-center">
-                        <span className="w-3.5 h-3.5 rounded-full border border-white/80 bg-blue-500 shadow-md flex items-center justify-center text-[8px] text-white font-bold leading-none">
+                        <span className="size-3.5 rounded-full border border-white/80 bg-blue-500 shadow-md flex items-center justify-center text-[8px] text-white font-bold leading-none">
                           +
                         </span>
-                        <div className="absolute top-4 left-1/2 -translate-x-1/2 whitespace-nowrap px-1.5 py-0.5 rounded bg-black/85 text-stone-200 font-mono text-[9px] font-semibold border border-white/20">
+                        <div className="absolute top-4 left-1/2 -translate-x-1/2 whitespace-nowrap px-1.5 py-0.5 rounded bg-black/85 text-stone-200 font-mono text-[9px] font-semibold border border-white/20 tabular-nums">
                           AMB: {thermography.ambient_temp_c.toFixed(1)}°C
                         </div>
                       </div>
@@ -502,15 +502,15 @@ export const MirageModal: FC<MirageModalProps> = ({
                     {/* False-Color Spectrum Colorbar Legend */}
                     <div className="absolute bottom-2 left-2 right-2 px-2 py-1 rounded bg-black/80 backdrop-blur-xs border border-white/20 flex items-center justify-between text-[8px] font-mono text-white z-20">
                       <span className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-xs bg-[#1e1b4b]" />
+                        <span className="size-2 rounded-xs bg-[#1e1b4b]" />
                         <span>&lt;4°C Cold Hold</span>
                       </span>
                       <span className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-xs bg-[#e11d48]" />
+                        <span className="size-2 rounded-xs bg-[#e11d48]" />
                         <span className="text-amber-300 font-bold">21°C–31°C Microbial Danger Zone</span>
                       </span>
                       <span className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-xs bg-[#fef08a]" />
+                        <span className="size-2 rounded-xs bg-[#fef08a]" />
                         <span>&gt;65°C Hot Hold</span>
                       </span>
                     </div>
@@ -530,10 +530,10 @@ export const MirageModal: FC<MirageModalProps> = ({
                           <div className="absolute -bottom-3 right-3 bg-stone-900/95 text-emerald-300 border border-emerald-400 text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-sm tracking-wider">
                             [STEAM/THERMAL: &gt;65°C]
                           </div>
-                          <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-emerald-300" />
-                          <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-emerald-300" />
-                          <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-emerald-300" />
-                          <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-emerald-300" />
+                          <div className="absolute -top-1 -left-1 size-3 border-t-2 border-l-2 border-emerald-300" />
+                          <div className="absolute -top-1 -right-1 size-3 border-t-2 border-r-2 border-emerald-300" />
+                          <div className="absolute -bottom-1 -left-1 size-3 border-b-2 border-l-2 border-emerald-300" />
+                          <div className="absolute -bottom-1 -right-1 size-3 border-b-2 border-r-2 border-emerald-300" />
                         </div>
 
                         {/* Secondary Emulsion Core Bounding Box */}
@@ -545,10 +545,10 @@ export const MirageModal: FC<MirageModalProps> = ({
 
                         {/* HUD Telemetry Chips */}
                         <div className="absolute top-2.5 left-2.5 bg-black/80 text-emerald-400 text-[10px] font-mono font-bold px-2.5 py-1 rounded-md border border-emerald-500/50 shadow-sm flex items-center gap-1.5 z-20">
-                          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                          <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
                           <span>● MIRAGE VLM SPECTROGRAPH</span>
                         </div>
-                        <div className="absolute bottom-9 right-2.5 bg-black/80 text-stone-200 text-[10px] font-mono px-2.5 py-1 rounded-md border border-stone-700 shadow-sm z-20">
+                        <div className="absolute bottom-9 right-2.5 bg-black/80 text-stone-200 text-[10px] font-mono px-2.5 py-1 rounded-md border border-stone-700 shadow-sm z-20 tabular-nums">
                           LATENCY: {mirageInspection.mirage_engine?.latency_ms ?? 12} MS
                         </div>
                       </>
@@ -561,16 +561,16 @@ export const MirageModal: FC<MirageModalProps> = ({
                         {/* Primary Spoilage Bounding Box */}
                         <div className="absolute inset-x-5 inset-y-4 border-2 border-rose-500/90 rounded-xl pointer-events-none shadow-[0_0_15px_rgba(244,63,94,0.4)]">
                           <div className="absolute -top-3 left-3 bg-stone-900/95 text-rose-300 border border-rose-500 text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-sm tracking-wider flex items-center gap-1.5">
-                            <span className="h-1.5 w-1.5 rounded-full bg-rose-500 animate-ping" />
+                            <span className="size-1.5 rounded-full bg-rose-500 animate-ping" />
                             <span>[MOLD/DISCOLORATION: RISK]</span>
                           </div>
                           <div className="absolute -bottom-3 right-3 bg-stone-900/95 text-rose-300 border border-rose-500 text-[10px] font-mono font-bold px-2 py-0.5 rounded shadow-sm tracking-wider">
                             [TEMP_HAZARD: 22°C - 31°C DANGER ZONE]
                           </div>
-                          <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-rose-400" />
-                          <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-rose-400" />
-                          <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-rose-400" />
-                          <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-rose-400" />
+                          <div className="absolute -top-1 -left-1 size-3 border-t-2 border-l-2 border-rose-400" />
+                          <div className="absolute -top-1 -right-1 size-3 border-t-2 border-r-2 border-rose-400" />
+                          <div className="absolute -bottom-1 -left-1 size-3 border-b-2 border-l-2 border-rose-400" />
+                          <div className="absolute -bottom-1 -right-1 size-3 border-b-2 border-r-2 border-rose-400" />
                         </div>
 
                         {/* Secondary Spoilage Core Bounding Box */}
@@ -582,10 +582,10 @@ export const MirageModal: FC<MirageModalProps> = ({
 
                         {/* HUD Telemetry Chips */}
                         <div className="absolute top-2.5 left-2.5 bg-black/80 text-rose-400 text-[10px] font-mono font-bold px-2.5 py-1 rounded-md border border-rose-500/50 shadow-sm flex items-center gap-1.5 z-20">
-                          <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse" />
+                          <span className="size-2 rounded-full bg-rose-500 animate-pulse" />
                           <span>● MIRAGE VLM SPECTROGRAPH</span>
                         </div>
-                        <div className="absolute bottom-9 right-2.5 bg-black/80 text-stone-200 text-[10px] font-mono px-2.5 py-1 rounded-md border border-stone-700 shadow-sm z-20">
+                        <div className="absolute bottom-9 right-2.5 bg-black/80 text-stone-200 text-[10px] font-mono px-2.5 py-1 rounded-md border border-stone-700 shadow-sm z-20 tabular-nums">
                           LATENCY: {mirageInspection.mirage_engine?.latency_ms ?? 12} MS
                         </div>
                       </>
@@ -597,7 +597,7 @@ export const MirageModal: FC<MirageModalProps> = ({
                     <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 space-y-1 shadow-xs">
                       <div className="text-[10px] text-stone-500 uppercase font-bold flex items-center justify-between">
                         <span>OCR KITCHEN PREP TIMESTAMP:</span>
-                        <Clock className="w-3 h-3 text-emerald-700" />
+                        <Clock className="size-3 text-emerald-700" />
                       </div>
                       <div className="font-mono text-xs font-bold text-stone-900 bg-white px-2 py-1 rounded border border-stone-200">
                         {ocrPrepTimestamp}
@@ -607,7 +607,7 @@ export const MirageModal: FC<MirageModalProps> = ({
                     <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 space-y-1 shadow-xs">
                       <div className="text-[10px] text-stone-500 uppercase font-bold flex items-center justify-between">
                         <span>VESSEL SEAL INTEGRITY:</span>
-                        <ShieldCheck className="w-3 h-3 text-emerald-700" />
+                        <ShieldCheck className="size-3 text-emerald-700" />
                       </div>
                       <div className="mt-0.5">
                         <span
@@ -617,7 +617,7 @@ export const MirageModal: FC<MirageModalProps> = ({
                               : "bg-emerald-100 text-emerald-800 border-emerald-300"
                           }`}
                         >
-                          <span className={`w-1.5 h-1.5 rounded-full ${isSealCompromised ? "bg-rose-600" : "bg-emerald-600"}`} />
+                          <span className={`size-1.5 rounded-full ${isSealCompromised ? "bg-rose-600" : "bg-emerald-600"}`} />
                           <span>{vesselSealStatus}</span>
                         </span>
                       </div>
@@ -717,7 +717,7 @@ export const MirageModal: FC<MirageModalProps> = ({
                   <div className="p-3.5 bg-stone-50 rounded-xl border border-stone-200 space-y-2.5 shadow-sm">
                     <div className="flex items-center justify-between border-b border-stone-200 pb-1.5">
                       <span className="text-xs font-bold text-stone-800 uppercase flex items-center gap-1.5">
-                        <ShieldCheck className="w-4 h-4 text-emerald-700" />
+                        <ShieldCheck className="size-4 text-emerald-700" />
                         <span>FSSAI COMPLIANCE VERIFICATION METRICS</span>
                       </span>
                       <span className="font-mono text-[10px] text-stone-500 font-semibold">
@@ -758,7 +758,7 @@ export const MirageModal: FC<MirageModalProps> = ({
                     <div className="p-2.5 bg-white rounded-lg border border-stone-200 space-y-2">
                       <div className="flex items-center justify-between text-xs font-semibold text-stone-700">
                         <span className="flex items-center gap-1.5 font-bold">
-                          <Clock className="w-3.5 h-3.5 text-stone-500" />
+                          <Clock className="size-3.5 text-stone-500" />
                           <span>4-HOUR MICROBIAL PROLIFERATION WINDOW:</span>
                         </span>
                         <span

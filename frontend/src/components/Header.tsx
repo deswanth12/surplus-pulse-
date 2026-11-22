@@ -82,7 +82,7 @@ export const Header: FC<HeaderProps> = ({
         <div className="bg-stone-900 text-white border-b border-stone-800">
           <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-2 text-xs">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="font-mono font-bold text-emerald-400 uppercase tracking-wider text-[11px]">
                 SURPLUSPULSE MULTI-ROLE CORPS
               </span>
@@ -156,11 +156,11 @@ export const Header: FC<HeaderProps> = ({
             {/* Left: Brand + Location Selector + Live IST Clock */}
             <div className="flex items-center justify-between lg:justify-start gap-3 sm:gap-4 flex-wrap">
               <div className="flex items-center gap-2.5 shrink-0">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex items-center justify-center shadow-sm shrink-0">
-                  <Leaf className="w-5 h-5 text-emerald-100" />
+                <div className="size-9 sm:size-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center shadow-sm shrink-0">
+                  <Leaf className="size-5 text-emerald-100" />
                 </div>
                 <div>
-                  <h1 className="font-headline text-lg sm:text-xl font-extrabold text-stone-900 block leading-tight tracking-tight">
+                  <h1 className="font-headline text-lg sm:text-xl font-extrabold text-stone-900 block leading-tight tracking-tight text-balance">
                     SURPLUSPULSE
                   </h1>
                   <span className="font-label text-xs text-emerald-700 block font-semibold tracking-wide">
@@ -178,9 +178,9 @@ export const Header: FC<HeaderProps> = ({
                     onClick={() => setLocationOpen((o) => !o)}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-100/90 border border-stone-200 hover:bg-stone-200/70 text-stone-800 whitespace-nowrap transition-colors duration-150 cursor-pointer text-xs sm:text-sm font-medium shadow-2xs"
                   >
-                    <MapPin className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <MapPin className="size-3.5 text-emerald-600 shrink-0" />
                     <span className="font-label">{selectedLocation}</span>
-                    <ChevronDown className="w-3.5 h-3.5 text-stone-500" />
+                    <ChevronDown className="size-3.5 text-stone-500" />
                   </button>
 
                   {locationOpen && (
@@ -198,7 +198,7 @@ export const Header: FC<HeaderProps> = ({
                           }`}
                         >
                           <span>{loc}</span>
-                          {selectedLocation === loc && <CheckCircle2 className="w-4 h-4 text-emerald-600" />}
+                          {selectedLocation === loc && <CheckCircle2 className="size-4 text-emerald-600" />}
                         </button>
                       ))}
                     </div>
@@ -206,8 +206,8 @@ export const Header: FC<HeaderProps> = ({
                 </div>
 
                 {/* Live IST Telemetry Clock Badge (tested: closest span must not have hidden) */}
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 font-mono text-xs text-emerald-800 font-semibold shrink-0 shadow-2xs">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 font-mono text-xs text-emerald-800 font-semibold shrink-0 shadow-2xs tabular-nums">
+                  <span className="size-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
                   <span>{timeStr}</span>
                 </span>
               </div>
@@ -223,7 +223,7 @@ export const Header: FC<HeaderProps> = ({
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-50 border border-stone-200 text-stone-700 hover:bg-stone-100 hover:border-stone-300 font-label text-xs sm:text-sm font-semibold transition-all duration-150 cursor-pointer disabled:opacity-50 shadow-2xs"
                 title="Inspect food quality with 22MB Mirage Vision-Language Model"
               >
-                <Camera className="w-4 h-4 text-stone-600" />
+                <Camera className="size-4 text-stone-600" />
                 <span>{mirageScanning ? "Scanning..." : "AI Food Inspection"}</span>
                 <span className="sr-only">Mirage VLM (22MB)</span>
               </button>
@@ -236,7 +236,7 @@ export const Header: FC<HeaderProps> = ({
                 title="Reset Demo Data"
                 aria-label="Reset Demo Data"
               >
-                <RefreshCw className={`w-4 h-4 ${isResetting ? "animate-spin text-emerald-600" : ""}`} />
+                <RefreshCw className={`size-4 ${isResetting ? "animate-spin text-emerald-600" : ""}`} />
               </button>
 
               <button
@@ -245,7 +245,7 @@ export const Header: FC<HeaderProps> = ({
                 aria-label="Dispatch Surplus (<45s)"
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 font-label text-xs sm:text-sm font-bold shadow-sm transition-all duration-150 cursor-pointer hover:shadow-md"
               >
-                <Plus className="w-4 h-4" />
+                <Plus className="size-4" />
                 <span>Donate Food</span>
                 <span className="sr-only">Dispatch Surplus (&lt;45s)</span>
               </button>
@@ -273,7 +273,7 @@ export const Header: FC<HeaderProps> = ({
                     : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50 font-medium"
                 }`}
               >
-                <Utensils className="w-3.5 h-3.5" />
+                <Utensils className="size-3.5" />
                 <span>Available Food</span>
                 <span className="sr-only">[1] RESCUE RADAR</span>
               </button>
@@ -293,7 +293,7 @@ export const Header: FC<HeaderProps> = ({
                     : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50 font-medium"
                 }`}
               >
-                <Navigation className="w-3.5 h-3.5" />
+                <Navigation className="size-3.5" />
                 <span>Live Delivery Map</span>
                 <span className="sr-only">[2] HOLOGRAPHIC DISPATCH MATRIX</span>
               </button>
@@ -313,7 +313,7 @@ export const Header: FC<HeaderProps> = ({
                     : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50 font-medium"
                 }`}
               >
-                <Scale className="w-3.5 h-3.5" />
+                <Scale className="size-3.5" />
                 <span>Impact &amp; Tax Relief</span>
                 <span className="sr-only">[3] QUANTUM ESG &amp; CARBON LEDGER</span>
               </button>
@@ -333,14 +333,14 @@ export const Header: FC<HeaderProps> = ({
                     : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50 font-medium"
                 }`}
               >
-                <ShieldCheck className="w-3.5 h-3.5" />
+                <ShieldCheck className="size-3.5" />
                 <span>Food Safety</span>
                 <span className="sr-only">[4] HYGIENE PROTOCOL DIRECTIVES</span>
               </button>
             </nav>
 
             <div className="hidden lg:flex items-center gap-2 text-xs font-label text-stone-500 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span className="size-1.5 rounded-full bg-emerald-500" />
               <span>Bengaluru Central Autonomous Sector • 24/7 Operations</span>
             </div>
           </div>

@@ -47,12 +47,12 @@ export const DispatchCartDrawer: FC<DispatchCartDrawerProps> = ({
   const waterSavedLiters = Math.round(totalKgInTransit * 800);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 font-body">
+    <div className="fixed bottom-0 left-0 right-0 z-40 font-body pb-[max(0px,env(safe-area-inset-bottom))]">
       {/* Floating Bottom Action Strip (Always visible) */}
       <div className="bg-light-surface-container-lowest/98 border-t border-light-outline-variant/70 shadow-[0_-4px_24px_rgba(31,27,23,0.08)] backdrop-blur-md text-light-on-surface px-4 py-2.5 flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-3">
-          <div className="h-9 w-9 bg-light-primary text-light-on-primary rounded-lg shadow-sm flex items-center justify-center shrink-0">
-            <Truck className="h-4 w-4" />
+          <div className="size-9 bg-light-primary text-light-on-primary rounded-lg shadow-sm flex items-center justify-center shrink-0">
+            <Truck className="size-4" />
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ export const DispatchCartDrawer: FC<DispatchCartDrawerProps> = ({
                 SWIGGY/ZOMATO CORRIDOR
               </span>
             </div>
-            <p className="text-[11px] text-light-on-surface-variant font-label mt-0.5">
+            <p className="text-[11px] text-light-on-surface-variant font-label mt-0.5 tabular-nums">
               {activeMissions.length > 0
                 ? `${activeMissions.length} ACTIVE RESCUE MISSIONS • ${totalMealsInTransit} MEALS CLAIMED • ${totalMealsInTransit} BENEFICIARIES FED • ${co2OffsetKg} KG CO₂ OFFSET • FLEET: TVS KING CARGO EV`
                 : `${urgentPosted.length} SURPLUS RATIONS PENDING CLAIM IN BENGALURU SECTORS`}
@@ -79,7 +79,7 @@ export const DispatchCartDrawer: FC<DispatchCartDrawerProps> = ({
               className="px-3 py-1.5 text-xs font-label font-bold flex items-center gap-1.5 cursor-pointer rounded-md bg-light-secondary text-light-on-secondary hover:opacity-90 shadow-sm transition-opacity"
               aria-label="Track primary active delivery"
             >
-              <Navigation className="h-3 w-3" />
+              <Navigation className="size-3" />
               <span>TRACK LIVE DELIVERY</span>
             </button>
           )}
@@ -92,7 +92,7 @@ export const DispatchCartDrawer: FC<DispatchCartDrawerProps> = ({
           >
             <span>{isOpen ? "COLLAPSE" : "DISPATCH SUMMARY"}</span>
             <ChevronUp
-              className={`h-3.5 w-3.5 transition-transform duration-200 ${
+              className={`size-3.5 transition-transform duration-200 ${
                 isOpen ? "rotate-180" : ""
               }`}
             />

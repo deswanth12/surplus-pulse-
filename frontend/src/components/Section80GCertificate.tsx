@@ -161,14 +161,14 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
           aria-hidden="true"
           className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none"
         >
-          <Award className="w-96 h-96 text-stone-900" />
+          <Award className="size-96 text-stone-900" />
         </div>
 
         {/* Municipal & Income Tax Authority Header */}
         <header className="border-b-2 border-stone-800 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-3.5">
-            <div className="w-14 h-14 rounded-full bg-stone-900 text-white flex items-center justify-center shadow shrink-0">
-              <ShieldCheck className="w-8 h-8 text-amber-400" />
+            <div className="size-14 rounded-full bg-stone-900 text-white flex items-center justify-center shadow shrink-0">
+              <ShieldCheck className="size-8 text-amber-400" />
             </div>
             <div>
               <span className="font-label text-[11px] font-black uppercase tracking-widest text-stone-600 block">
@@ -297,7 +297,7 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
               </tr>
               <tr className="bg-emerald-50/60 font-bold">
                 <td className="p-3 text-emerald-900 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                  <CheckCircle2 className="size-4 text-emerald-600" />
                   <span>Eligible Tax Deduction under Section 80G(5)(vi) (50% of FMV)</span>
                 </td>
                 <td className="p-3 text-right font-mono text-emerald-900 text-sm tabular-nums">
@@ -314,7 +314,7 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
               </tr>
               <tr className="bg-white font-semibold">
                 <td className="p-3 text-stone-700 flex items-center gap-1.5">
-                  <Award className="w-4 h-4 text-emerald-600" />
+                  <Award className="size-4 text-emerald-600" />
                   <span>ESG Certified CO₂e Emission Abatement (2.5 kg CO₂e / kg Food Diverted)</span>
                 </td>
                 <td className="p-3 text-right font-mono text-stone-900 tabular-nums">
@@ -331,7 +331,7 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
           <div className="flex items-center gap-3.5 bg-stone-50 border border-stone-200 rounded-xl p-3 shrink-0">
             <svg
               viewBox="0 0 21 21"
-              className="w-20 h-20 bg-white p-1 rounded border border-stone-300 shadow-2xs"
+              className="size-20 bg-white p-1 rounded border border-stone-300 shadow-2xs"
               role="img"
               aria-label={`Scannable QR Verification Matrix encoding ${verificationUrl}`}
             >
@@ -371,7 +371,7 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
           {/* Chartered Accountant Attestation Seal */}
           <div className="text-right sm:text-right space-y-1">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-stone-100 border border-stone-300 text-[10px] font-bold text-stone-700 uppercase">
-              <Stamp className="w-3.5 h-3.5 text-stone-600" />
+              <Stamp className="size-3.5 text-stone-600" />
               <span>DIGITALLY ATTESTED &amp; SEALED</span>
             </div>
             <div className="font-headline font-bold text-sm text-stone-900">
@@ -398,12 +398,12 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
           >
             {isCopied ? (
               <>
-                <Check className="w-4 h-4 text-emerald-600" />
+                <Check className="size-4 text-emerald-600" />
                 <span>COPIED VERIFICATION LINK ✓</span>
               </>
             ) : (
               <>
-                <Share2 className="w-4 h-4 text-stone-600" />
+                <Share2 className="size-4 text-stone-600" />
                 <span>COPY PUBLIC VERIFICATION LINK</span>
               </>
             )}
@@ -415,7 +415,7 @@ export const Section80GCertificate: FC<Section80GCertificateProps> = ({
           aria-label="Print Section 80G Tax Exemption Certificate"
           className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-black text-white font-label text-xs font-bold flex items-center justify-center gap-2 shadow-md transition-colors cursor-pointer"
         >
-          <Printer className="w-4 h-4 text-amber-400" />
+          <Printer className="size-4 text-amber-400" />
           <span>PRINT / EXPORT 80G TAX CERTIFICATE (PDF)</span>
         </button>
       </div>

@@ -218,14 +218,14 @@ export default function App() {
 
   if (loading && listings.length === 0) {
     return (
-      <div className="min-h-screen bg-light-surface flex flex-col items-center justify-center text-light-on-surface font-body space-y-4">
+      <div className="min-h-dvh bg-light-surface flex flex-col items-center justify-center text-light-on-surface font-body space-y-4">
         <div className="bg-light-surface-container-lowest border border-light-outline-variant/60 rounded-2xl p-8 flex flex-col items-center space-y-3 shadow-md">
-          <div className="h-10 w-10 border-4 border-light-outline-variant/40 border-t-light-primary rounded-full animate-spin" />
+          <div className="size-10 border-4 border-light-outline-variant/40 border-t-light-primary rounded-full animate-spin" />
           <div className="text-xs uppercase font-bold tracking-widest text-light-primary font-headline flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-light-primary animate-ping" aria-hidden="true" />
-            <span>[AI PROTOCOL // SYNCHRONIZING NEURAL DISPATCH GRID]</span>
+            <span className="size-2 rounded-full bg-light-primary animate-ping" aria-hidden="true" />
+            <span className="text-balance">[AI PROTOCOL // SYNCHRONIZING NEURAL DISPATCH GRID]</span>
           </div>
-          <p className="text-xs text-light-on-surface-variant font-label">
+          <p className="text-xs text-light-on-surface-variant font-label text-pretty">
             Synchronizing Municipal Relief Dispatch Logs...
           </p>
         </div>
@@ -236,7 +236,7 @@ export default function App() {
   return (
     <div
       ref={mainContainerRef}
-      className="min-h-screen bg-stone-50/50 text-stone-900 font-body selection:bg-emerald-100 selection:text-emerald-900 pb-48"
+      className="min-h-dvh bg-stone-50/50 text-stone-900 font-body selection:bg-emerald-100 selection:text-emerald-900 pb-48"
     >
       {/* Header with Navigation and Ticker */}
       <Header
@@ -373,7 +373,7 @@ export default function App() {
                           aria-label="Reset Registry"
                         >
                           <RotateCcw
-                            className={`h-3.5 w-3.5 ${isResetting ? "animate-spin text-emerald-600" : "text-stone-600"}`}
+                            className={`size-3.5 ${isResetting ? "animate-spin text-emerald-600" : "text-stone-600"}`}
                             aria-hidden="true"
                           />
                           <span>{isResetting ? "RESETTING REGISTRY..." : "RESET REGISTRY"}</span>
@@ -384,7 +384,7 @@ export default function App() {
                           className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm hover:shadow cursor-pointer transition-all"
                           aria-label="Dispatch New Surplus (<45s)"
                         >
-                          <Plus className="h-3.5 w-3.5 stroke-[2.5]" aria-hidden="true" />
+                          <Plus className="size-3.5 stroke-[2.5]" aria-hidden="true" />
                           <span>DISPATCH NEW SURPLUS (&lt;45s)</span>
                         </button>
                       </div>

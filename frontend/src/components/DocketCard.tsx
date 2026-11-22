@@ -335,7 +335,7 @@ export const DocketCard: FC<DocketCardProps> = ({
               <span className={`inline-flex items-center gap-1.5 font-label text-xs font-bold tabular-nums ${
                 isExpired ? "text-rose-600" : isUrgent ? "text-amber-600" : "text-emerald-600"
               }`}>
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="size-3.5" />
                 <span>
                   {listing.minutes_remaining > 0
                     ? `${hrsLeft}h ${minsLeft}m safe hold remaining`
@@ -370,11 +370,11 @@ export const DocketCard: FC<DocketCardProps> = ({
 
           {/* Food Name & Description */}
           <div>
-            <h3 className="font-bold text-stone-900 text-lg leading-snug tracking-tight">
+            <h3 className="font-bold text-stone-900 text-lg leading-snug tracking-tight text-balance">
               {listing.food_name}
             </h3>
             {listing.handling_notes && (
-              <p className="font-body text-xs text-stone-500 mt-1 line-clamp-2 leading-relaxed">
+              <p className="font-body text-xs text-stone-500 mt-1 line-clamp-2 leading-relaxed text-pretty">
                 {listing.handling_notes}
               </p>
             )}
@@ -391,7 +391,7 @@ export const DocketCard: FC<DocketCardProps> = ({
               </p>
             </div>
             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-stone-100 text-stone-700 font-label text-xs tabular-nums shrink-0 font-medium border border-stone-200/50">
-              <MapPin className="w-3 h-3 text-emerald-600" />
+              <MapPin className="size-3 text-emerald-600" />
               <span>{distanceKm} km away</span>
             </span>
           </div>
@@ -399,13 +399,13 @@ export const DocketCard: FC<DocketCardProps> = ({
           {/* Portion & Logistics Badges */}
           <div className="grid grid-cols-2 gap-2 text-stone-600">
             <div className="flex items-center gap-1.5 bg-stone-50 px-2.5 py-1.5 rounded-lg border border-stone-200/40">
-              <Users className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <Users className="size-3.5 text-emerald-600 shrink-0" />
               <span className="font-label text-xs tabular-nums font-medium truncate">
                 Feeds {listing.quantity_meals} People • {listing.quantity_kg} kg
               </span>
             </div>
             <div className="flex items-center gap-1.5 bg-stone-50 px-2.5 py-1.5 rounded-lg border border-stone-200/40">
-              <PackageCheck className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+              <PackageCheck className="size-3.5 text-amber-600 shrink-0" />
               <span className="font-label text-xs truncate font-medium">
                 Insulated Stainless Urn
               </span>
@@ -435,7 +435,7 @@ export const DocketCard: FC<DocketCardProps> = ({
                 title="1-Click WhatsApp Courier Dispatch"
                 className="py-2 px-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-label text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer disabled:opacity-60"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
+                <MessageSquare className="size-3.5 text-emerald-600" />
                 <span>WhatsApp Dispatch</span>
               </button>
               <button
@@ -446,7 +446,7 @@ export const DocketCard: FC<DocketCardProps> = ({
                 title="SMS Courier Dispatch Alert"
                 className="py-2 px-2.5 rounded-xl bg-stone-50 hover:bg-stone-100 text-stone-700 border border-stone-200 font-label text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer disabled:opacity-60"
               >
-                <Send className="w-3.5 h-3.5 text-stone-600" />
+                <Send className="size-3.5 text-stone-600" />
                 <span>SMS Alert</span>
               </button>
             </div>
@@ -485,7 +485,7 @@ export const DocketCard: FC<DocketCardProps> = ({
             aria-label="Open official audit receipt and tax certificate"
             className="w-full py-2.5 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-label text-sm font-bold shadow-sm transition-all cursor-pointer flex items-center justify-center gap-1.5"
           >
-            <ShieldCheck className="w-4 h-4" />
+            <ShieldCheck className="size-4" />
             <span>VIEW OFFICIAL AUDIT RECEIPT &amp; TAX CERTIFICATE</span>
           </button>
         )}
@@ -499,7 +499,7 @@ export const DocketCard: FC<DocketCardProps> = ({
             }}
             className="w-full py-2 px-3 rounded-xl bg-stone-50 text-stone-700 border border-stone-200 hover:bg-stone-100 font-label text-xs font-semibold transition-colors duration-150 flex items-center justify-center gap-1.5 cursor-pointer"
           >
-            <Truck className="w-3.5 h-3.5 text-stone-600" />
+            <Truck className="size-3.5 text-stone-600" />
             <span>Track Live Delivery</span>
             <span className="sr-only">LIVE TRACK</span>
           </button>

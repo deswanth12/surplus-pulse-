@@ -12,6 +12,9 @@ export default {
       '2xl': '1536px',
     },
     extend: {
+      zIndex: {
+        '1000': '1000',
+      },
       borderWidth: {
         '3': '3px',
       },

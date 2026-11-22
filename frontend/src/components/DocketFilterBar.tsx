@@ -42,7 +42,7 @@ export const DocketFilterBar: FC<DocketFilterBarProps> = ({
     >
       <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 min-w-0">
         <span className="text-xs font-bold text-stone-500 uppercase shrink-0 flex items-center gap-1.5 font-label mr-1">
-          <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-600" />
+          <SlidersHorizontal className="size-3.5 text-emerald-600" />
           <span>Filters:</span>
         </span>
         {filterOptions.map((st) => {
@@ -74,7 +74,7 @@ export const DocketFilterBar: FC<DocketFilterBarProps> = ({
       </div>
 
       <div className="text-xs font-label text-emerald-800 font-semibold flex items-center gap-2 shrink-0 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200/70 self-start lg:self-center shadow-2xs">
-        <span className="h-2 w-2 rounded-full bg-emerald-500 animate-ping" aria-hidden="true" />
+        <span className="size-2 rounded-full bg-emerald-500 animate-ping" aria-hidden="true" />
         <span>Hyperlocal Proximity Dispatch Active</span>
       </div>
     </section>

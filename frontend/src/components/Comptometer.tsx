@@ -41,11 +41,11 @@ export const Comptometer: FC<ComptometerProps> = ({
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-light-outline-variant/40 pb-4">
         <div>
-          <h2 className="text-lg sm:text-title-lg font-bold font-headline text-light-on-surface flex items-center gap-2">
-            <Award className="h-5 w-5 sm:h-6 sm:w-6 text-light-primary" aria-hidden="true" />
+          <h2 className="text-lg sm:text-title-lg font-bold font-headline text-light-on-surface flex items-center gap-2 text-balance">
+            <Award className="size-5 sm:size-6 text-light-primary" aria-hidden="true" />
             <span>QUANTUM ESG &amp; CARBON RECOVERY LEDGER</span>
           </h2>
-          <p className="text-xs text-light-on-surface-variant font-label mt-0.5">
+          <p className="text-xs text-light-on-surface-variant font-label mt-0.5 text-pretty">
             Demonstrating fiscal sustainability: Commercial banquet venues and corporate kitchens achieve 2,600%+ net recovery on surplus dispatch automation.
           </p>
         </div>
@@ -54,7 +54,7 @@ export const Comptometer: FC<ComptometerProps> = ({
           className="px-4 py-2 rounded-md bg-light-primary text-light-on-primary font-label text-xs font-bold hover:bg-light-primary-container shadow-sm transition-colors flex items-center gap-2 self-start sm:self-auto cursor-pointer"
           aria-label="Inspect ESG Carbon Charter Modal"
         >
-          <FileText className="h-4 w-4" aria-hidden="true" />
+          <FileText className="size-4" aria-hidden="true" />
           <span>INSPECT ESG CARBON CHARTER</span>
         </button>
       </div>
@@ -63,39 +63,39 @@ export const Comptometer: FC<ComptometerProps> = ({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 font-label">
         <div className="p-4 bg-light-surface-container-low rounded-xl border border-light-outline-variant/60 space-y-2 shadow-sm">
           <span className="text-[11px] font-bold text-light-on-surface-variant uppercase flex items-center gap-1.5">
-            <Zap className="h-3.5 w-3.5 text-light-primary" />
+            <Zap className="size-3.5 text-light-primary" />
             <span>TOTAL MASS DIVERTED</span>
           </span>
           <div className="text-xl sm:text-2xl font-bold font-headline text-light-on-surface tabular-nums">
             {impact?.total_food_kg_saved ?? 133} KG
           </div>
-          <p className="text-xs text-light-on-surface-variant leading-relaxed">
+          <p className="text-xs text-light-on-surface-variant leading-relaxed text-pretty">
             Standardized culinary portion density: 0.45 kg edible mass per meal plate.
           </p>
         </div>
 
         <div className="p-4 bg-light-surface-container-low rounded-xl border border-light-outline-variant/60 space-y-2 shadow-sm">
           <span className="text-[11px] font-bold text-light-on-surface-variant uppercase flex items-center gap-1.5">
-            <TrendingUp className="h-3.5 w-3.5 text-light-success" />
+            <TrendingUp className="size-3.5 text-light-success" />
             <span>GHG AVOIDANCE FACTOR</span>
           </span>
           <div className="text-xl sm:text-2xl font-bold font-headline text-light-success tabular-nums">
             {impact?.total_co2_kg_offset ?? 332.5} KG CO2e
           </div>
-          <p className="text-xs text-light-on-surface-variant leading-relaxed">
+          <p className="text-xs text-light-on-surface-variant leading-relaxed text-pretty">
             EPA WARM Standard: 1 kg organic waste prevented from anaerobic decomposition offsets 2.5 kg CO2e.
           </p>
         </div>
 
         <div className="p-4 bg-light-surface-container-low rounded-xl border border-light-outline-variant/60 space-y-2 shadow-sm">
           <span className="text-[11px] font-bold text-light-on-surface-variant uppercase flex items-center gap-1.5">
-            <Sparkles className="h-3.5 w-3.5 text-light-tertiary" />
+            <Sparkles className="size-3.5 text-light-tertiary" />
             <span>VIRTUAL WATER CONSERVED</span>
           </span>
           <div className="text-xl sm:text-2xl font-bold font-headline text-light-tertiary tabular-nums">
             {(impact?.total_water_liters_saved ?? 106400).toLocaleString()} LITERS
           </div>
-          <p className="text-xs text-light-on-surface-variant leading-relaxed">
+          <p className="text-xs text-light-on-surface-variant leading-relaxed text-pretty">
             Calculated at 800 Liters of agricultural and culinary water embodied per kg of prepared provisions.
           </p>
         </div>
@@ -106,16 +106,16 @@ export const Comptometer: FC<ComptometerProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-light-outline-variant/40 pb-3">
           <div className="flex items-center gap-3">
             <div
-              className="h-9 w-9 bg-light-primary text-light-on-primary rounded-lg flex items-center justify-center font-bold text-xs shrink-0 shadow-sm"
+              className="size-9 bg-light-primary text-light-on-primary rounded-lg flex items-center justify-center font-bold text-xs shrink-0 shadow-sm"
               aria-hidden="true"
             >
-              <Calculator className="h-4 w-4" />
+              <Calculator className="size-4" />
             </div>
             <div>
-              <h3 className="text-sm font-bold font-headline uppercase tracking-wider text-light-on-surface">
+              <h3 className="text-sm font-bold font-headline uppercase tracking-wider text-light-on-surface text-balance">
                 COMMERCIAL CATERER ROI &amp; CARBON LEDGER // QUANTUM ESG TELEMETRY
               </h3>
-              <p className="text-xs text-light-on-surface-variant font-label">
+              <p className="text-xs text-light-on-surface-variant font-label text-pretty">
                 Interactive financial recovery model demonstrating 2,400%+ ROI on ₹1,499/mo SaaS compliance tier.
               </p>
             </div>
@@ -244,7 +244,7 @@ export const Comptometer: FC<ComptometerProps> = ({
             className="px-4 py-2 rounded-md bg-light-surface-container-lowest text-light-on-surface border border-light-outline-variant hover:bg-light-surface-container font-label text-xs font-bold shadow-sm transition-colors flex items-center gap-1.5 self-stretch sm:self-auto justify-center cursor-pointer"
             aria-label="Print accounting fiscal recovery audit slip"
           >
-            <Printer className="h-3.5 w-3.5" aria-hidden="true" />
+            <Printer className="size-3.5" aria-hidden="true" />
             <span>PRINT ACCOUNTING AUDIT SLIP</span>
           </button>
         </div>

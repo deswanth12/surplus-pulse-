@@ -235,23 +235,23 @@ export const PostModal: FC<PostModalProps> = ({
         {/* Sticky Modal Header */}
         <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-md px-5 sm:px-6 py-3.5 border-b border-stone-200 flex items-center justify-between gap-3 shadow-xs">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-md shadow-orange-500/20 shrink-0">
-              <Flame className="h-5 w-5" aria-hidden="true" />
+            <div className="size-9 sm:size-10 rounded-xl bg-amber-600 flex items-center justify-center text-white shadow-sm shrink-0">
+              <Flame className="size-5" aria-hidden="true" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <h2
                   id="form-68a-title"
-                  className="text-sm sm:text-base font-extrabold font-headline text-stone-900 tracking-tight flex items-center gap-2"
+                  className="text-sm sm:text-base font-extrabold font-headline text-stone-900 tracking-tight flex items-center gap-2 text-balance"
                 >
                   <span>FORM 68-A • EMERGENCY FOOD SALVAGE DECLARATION</span>
                 </h2>
                 <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                  <ShieldCheck className="w-3 h-3 text-emerald-600" />
+                  <ShieldCheck className="size-3 text-emerald-600" />
                   <span>FSSAI VERIFIED</span>
                 </span>
               </div>
-              <p className="text-[11px] sm:text-xs text-stone-500 font-label mt-0.5">
+              <p className="text-[11px] sm:text-xs text-stone-500 font-label mt-0.5 text-pretty">
                 Broadcast surplus payload in &lt;45s // Neural Mirage VLM Quality Gating
               </p>
             </div>
@@ -321,14 +321,14 @@ export const PostModal: FC<PostModalProps> = ({
               </p>
               {inspectionResult?.image_data_url && (
                 <div className="flex items-center gap-3 p-2.5 bg-white/95 rounded-xl border border-red-200">
-                  <div className="relative w-14 h-14 rounded-lg overflow-hidden border border-red-300 shrink-0 shadow-xs">
+                  <div className="relative size-14 rounded-lg overflow-hidden border border-red-300 shrink-0 shadow-xs">
                     <img
                       src={inspectionResult.image_data_url}
                       alt="Spoiled inspection scan"
                       className="w-full h-full object-cover grayscale contrast-125"
                     />
                     <div className="absolute inset-0 bg-red-900/30 flex items-center justify-center">
-                      <AlertTriangle className="w-5 h-5 text-red-500 drop-shadow" />
+                      <AlertTriangle className="size-5 text-red-500 drop-shadow" />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
@@ -362,7 +362,7 @@ export const PostModal: FC<PostModalProps> = ({
                   onClick={() => runInstantInspection("fresh_biryani")}
                   className="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition-colors shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
                 >
-                  <Utensils className="w-3.5 h-3.5" />
+                  <Utensils className="size-3.5" />
                   <span>Switch to Fresh Dum Biryani (Safe)</span>
                 </button>
               </div>
@@ -377,7 +377,7 @@ export const PostModal: FC<PostModalProps> = ({
             >
               <div className="flex items-center justify-between">
                 <span className="font-bold flex items-center gap-2 text-sm text-emerald-800">
-                  <ShieldCheck className="h-5 w-5 text-emerald-600" aria-hidden="true" />
+                  <ShieldCheck className="size-5 text-emerald-600" aria-hidden="true" />
                   <span>
                     VERIFIED SAFE • {inspectionResult.food_inspection.fssai_grade} ({inspectionResult.food_inspection.quality_score}%)
                   </span>
@@ -386,13 +386,13 @@ export const PostModal: FC<PostModalProps> = ({
                   SAFE FOR DISPATCH
                 </span>
               </div>
-              <p className="text-xs text-stone-700 leading-relaxed">
+              <p className="text-xs text-stone-700 leading-relaxed text-pretty">
                 {inspectionResult.food_inspection.fssai_notes ||
                   "Mirage VLM verified core thermal state, intact container packaging, and passed FSSAI 4-hour rule."}
               </p>
               {inspectionResult.image_data_url && (
                 <div className="flex items-center gap-3 p-2.5 bg-white/95 rounded-xl border border-emerald-200">
-                  <div className="relative w-14 h-14 rounded-lg overflow-hidden border border-emerald-300 shrink-0 shadow-xs">
+                  <div className="relative size-14 rounded-lg overflow-hidden border border-emerald-300 shrink-0 shadow-xs">
                     <img
                       src={inspectionResult.image_data_url}
                       alt="Thermal inspection scan"
@@ -539,7 +539,7 @@ export const PostModal: FC<PostModalProps> = ({
               </label>
               {selectedDonor && (
                 <span className="text-[10px] text-stone-500 font-medium flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-emerald-600" />
+                  <MapPin className="size-3 text-emerald-600" />
                   <span>{selectedDonor.address || "Bengaluru Metro"}</span>
                 </span>
               )}
@@ -734,7 +734,7 @@ export const PostModal: FC<PostModalProps> = ({
                 SAFE HOLDING WINDOW (HOURS)
               </label>
               <span className="text-[11px] font-bold text-emerald-700 flex items-center gap-1">
-                <Clock className="w-3 h-3 text-emerald-600" />
+                <Clock className="size-3 text-emerald-600" />
                 <span>Expires ~{getExpiryTimeStr(formData.hours_valid)}</span>
               </span>
             </div>
@@ -755,7 +755,7 @@ export const PostModal: FC<PostModalProps> = ({
                 className="w-full accent-emerald-600 cursor-pointer"
                 aria-label="Safe holding window in hours"
               />
-              <span className="font-label font-extrabold text-emerald-700 text-xs whitespace-nowrap bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">
+              <span className="font-label font-extrabold text-emerald-700 text-xs whitespace-nowrap bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200 tabular-nums">
                 {formData.hours_valid} HOURS
               </span>
             </div>
@@ -765,7 +765,7 @@ export const PostModal: FC<PostModalProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center justify-between text-xs font-label shadow-xs">
               <span className="flex items-center gap-2 font-bold text-emerald-800">
-                <Coins className="w-4 h-4 text-emerald-600" />
+                <Coins className="size-4 text-emerald-600" />
                 <span>Section 80G Estimated Tax Deduction:</span>
               </span>
               <span className="font-extrabold text-emerald-700 font-headline text-sm tabular-nums">
@@ -774,7 +774,7 @@ export const PostModal: FC<PostModalProps> = ({
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-center justify-between text-xs font-label shadow-xs">
               <span className="flex items-center gap-2 font-bold text-amber-900">
-                <Leaf className="w-4 h-4 text-amber-600" />
+                <Leaf className="size-4 text-amber-600" />
                 <span>Landfill CO₂e Diverted:</span>
               </span>
               <span className="font-extrabold text-amber-800 font-headline text-sm tabular-nums">

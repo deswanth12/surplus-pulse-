@@ -122,15 +122,15 @@ export const CertificateModal: FC<CertificateModalProps> = ({
         <div className="flex justify-between items-start border-b border-light-outline-variant/40 pb-4">
           <div className="flex items-center gap-3">
             <div
-              className="w-12 h-12 rounded-full bg-light-primary text-light-on-primary flex items-center justify-center shadow-md shrink-0"
+              className="size-12 rounded-full bg-light-primary text-light-on-primary flex items-center justify-center shadow-md shrink-0"
               aria-hidden="true"
             >
-              <Award className="h-6 w-6 sm:h-7 sm:w-7" />
+              <Award className="size-6 sm:size-7" />
             </div>
             <div>
               <h2
                 id="cert-modal-title"
-                className="text-sm sm:text-base font-bold font-headline text-light-on-surface uppercase tracking-wide"
+                className="text-sm sm:text-base font-bold font-headline text-light-on-surface uppercase tracking-wide text-balance"
               >
                 STATE MUNICIPAL RELIEF CHARTER • ESG CARBON OFFSET
               </h2>
@@ -145,7 +145,7 @@ export const CertificateModal: FC<CertificateModalProps> = ({
             className="text-light-on-surface-variant hover:text-light-on-surface p-1.5 rounded-md hover:bg-light-surface-container transition-colors cursor-pointer"
             aria-label="Close ESG Charter dialog"
           >
-            <X className="h-5 w-5" aria-hidden="true" />
+            <X className="size-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -160,7 +160,7 @@ export const CertificateModal: FC<CertificateModalProps> = ({
                 : "bg-stone-100 text-stone-700 hover:bg-stone-200"
             }`}
           >
-            <FileCheck className="w-3.5 h-3.5" />
+            <FileCheck className="size-3.5" />
             <span>SECTION 80G TAX SLIP (FORM 10BE)</span>
           </button>
           <button
@@ -172,7 +172,7 @@ export const CertificateModal: FC<CertificateModalProps> = ({
                 : "bg-stone-100 text-stone-700 hover:bg-stone-200"
             }`}
           >
-            <Award className="w-3.5 h-3.5" />
+            <Award className="size-3.5" />
             <span>MUNICIPAL RELIEF CHARTER (BRSR CORE)</span>
           </button>
         </div>

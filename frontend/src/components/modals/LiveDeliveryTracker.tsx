@@ -143,14 +143,14 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
         <header className="px-6 py-4 border-b border-light-outline-variant/50 flex items-start justify-between gap-4 bg-light-surface-container-low">
           <div>
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-md bg-light-primary text-light-on-primary flex items-center justify-center shadow-sm">
-                <Truck className="w-4 h-4" />
+              <span className="size-8 rounded-md bg-light-primary text-light-on-primary flex items-center justify-center shadow-sm">
+                <Truck className="size-4" />
               </span>
-              <h2 id="live-tracker-title" className="font-headline text-title-lg text-light-on-surface font-bold">
+              <h2 id="live-tracker-title" className="font-headline text-title-lg text-light-on-surface font-bold text-balance">
                 LIVE RESCUE DISPATCH TRACKER
               </h2>
             </div>
-            <p className="font-body text-xs text-light-on-surface-variant mt-1">
+            <p className="font-body text-xs text-light-on-surface-variant mt-1 text-pretty">
               Hyperlocal Thermal Courier Relay • {listing.food_name} from {listing.donor_name}
             </p>
           </div>
@@ -158,9 +158,9 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
             type="button"
             onClick={onClose}
             aria-label="Close delivery tracker"
-            className="w-9 h-9 rounded-full bg-light-surface-container text-light-on-surface inline-flex items-center justify-center hover:bg-light-surface-container-high transition-colors cursor-pointer"
+            className="size-9 rounded-full bg-light-surface-container text-light-on-surface inline-flex items-center justify-center hover:bg-light-surface-container-high transition-colors cursor-pointer"
           >
-            <X className="w-4 h-4" />
+            <X className="size-4" />
           </button>
         </header>
 
@@ -180,7 +180,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 THERMAL VESSEL
               </span>
               <span className="font-headline text-lg font-bold text-light-success tabular-nums flex items-center gap-1 mt-1">
-                <Thermometer className="w-4 h-4" />
+                <Thermometer className="size-4" />
                 <span>66.4°C Hot Hold</span>
               </span>
               <span className="text-[10px] text-emerald-700 font-label font-bold block mt-0.5">
@@ -192,11 +192,11 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 VEHICLE BATTERY
               </span>
               <span className="font-headline text-lg font-bold text-light-primary tabular-nums flex items-center gap-1 mt-1">
-                <BatteryCharging className="w-4 h-4" />
+                <BatteryCharging className="size-4" />
                 <span>88% Electric Fleet</span>
               </span>
               <span className="text-[10px] text-amber-700 font-label font-bold flex items-center gap-1 mt-0.5">
-                <Zap className="w-3 h-3 text-amber-600" />
+                <Zap className="size-3 text-amber-600" />
                 <span>⚡ REGEN ACTIVE</span>
               </span>
             </div>
@@ -205,7 +205,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 EV CRUISE SPEED
               </span>
               <span className="font-headline text-lg font-bold text-light-on-surface tabular-nums flex items-center gap-1 mt-1">
-                <Truck className="w-4 h-4 text-emerald-600" />
+                <Truck className="size-4 text-emerald-600" />
                 <span>28.6 km/h</span>
               </span>
               <span className="text-[10px] text-stone-500 font-label font-medium block mt-0.5">
@@ -256,13 +256,13 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                     }`}
                   >
                     <span
-                      className={`w-6 h-6 rounded-full flex items-center justify-center font-label text-xs font-bold shrink-0 mt-0.5 tabular-nums ${
+                      className={`size-6 rounded-full flex items-center justify-center font-label text-xs font-bold shrink-0 mt-0.5 tabular-nums ${
                         isPassed || isCurrent
                           ? "bg-light-primary text-light-on-primary"
                           : "bg-light-surface-container-highest text-light-on-surface-variant"
                       }`}
                     >
-                      {isPassed ? <CheckCircle2 className="w-4 h-4" /> : st.step}
+                      {isPassed ? <CheckCircle2 className="size-4" /> : st.step}
                     </span>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between gap-2">
@@ -273,7 +273,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                           {st.code}
                         </span>
                       </div>
-                      <p className="font-body text-xs text-light-on-surface-variant mt-0.5">
+                      <p className="font-body text-xs text-light-on-surface-variant mt-0.5 text-pretty">
                         {st.step === 1 && "Optical, thermal, and FSSAI safe-hold guidelines certified."}
                         {st.step === 2 && `Volunteer courier ${driverName} assigned to mission.`}
                         {st.step === 3 && `Surplus secured in insulated cambros from ${listing.donor_name}.`}
@@ -293,7 +293,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
               <img
                 src="https://lh3.googleusercontent.com/aida/ALJJyrCvcsCccOOvoyLKqcpEeOvGbXYys5igk1yAcP1si51TEaJt4HiBdOAVg9Yv3_9IQHbf8v4_4LRtxQEYfU6kmE4D3oVDcQbvecV7o_wVNTUXg_Yx2zNsxMSL2ht6T1RzsKJDUOEZMNFC8oNyMUaRlwxzBxtX1RY-9DGjf4QX9yLntE2DWg7YzNlmKt59eba3OQgseQtSrvnA5w0RXlA_ubtKVDt6EMJGVXxAjWSZt84zV5zJ54kLQTLt"
                 alt={driverName}
-                className="w-12 h-12 rounded-full object-cover border border-light-outline-variant shrink-0"
+                className="size-12 rounded-full object-cover border border-light-outline-variant shrink-0"
               />
               <div className="min-w-0">
                 <span className="font-label text-[10px] font-bold text-light-primary uppercase tracking-wider block">
@@ -314,7 +314,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 onClick={() => setCallActive((c) => !c)}
                 className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-md bg-light-primary text-light-on-primary hover:bg-light-primary-container font-label text-xs sm:text-sm font-bold shrink-0 transition-colors cursor-pointer"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="size-4" />
                 <span>{callActive ? `Dialing ${driverPhone}...` : "CALL COURIER"}</span>
               </button>
               <a
@@ -325,7 +325,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 title="Send WhatsApp dispatch coordinates to courier"
                 className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-emerald-600 text-white hover:bg-emerald-700 font-label text-xs sm:text-sm font-bold shrink-0 transition-colors cursor-pointer no-underline"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="size-4" />
                 <span>WHATSAPP</span>
               </a>
               <a
@@ -334,7 +334,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 title="Send SMS dispatch alert to courier"
                 className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-stone-100 text-stone-800 hover:bg-stone-200 border border-stone-300 font-label text-xs sm:text-sm font-bold shrink-0 transition-colors cursor-pointer no-underline"
               >
-                <Send className="w-4 h-4" />
+                <Send className="size-4" />
                 <span>SMS</span>
               </a>
             </div>
@@ -352,7 +352,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 className="w-full py-3 px-4 rounded-md bg-light-warning-container text-light-on-warning-container hover:opacity-90 font-label text-sm font-bold shadow-sm transition-colors cursor-pointer flex items-center justify-center gap-2"
               >
                 <span>CONFIRM FOOD COLLECTED FROM KITCHEN</span>
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="size-4" />
               </button>
             </div>
           )}
@@ -368,7 +368,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 className="w-full py-3 px-4 rounded-md bg-light-primary text-light-on-primary hover:bg-light-primary-container font-label text-sm font-bold shadow-sm transition-colors cursor-pointer flex items-center justify-center gap-2"
               >
                 <span>CONFIRM DELIVERED TO SHELTER</span>
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="size-4" />
               </button>
             </div>
           )}
@@ -381,7 +381,7 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
                 className="w-full py-3 px-4 rounded-md bg-light-success-container text-light-on-success-container hover:opacity-90 font-label text-sm font-bold shadow-sm transition-colors cursor-pointer flex items-center justify-center gap-2"
               >
                 <span>View Handover Audit Certificate</span>
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="size-4" />
               </button>
             </div>
           )}
