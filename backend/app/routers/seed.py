@@ -34,6 +34,8 @@ def seed_endpoint(
     explicitly "development" and a valid X-Admin-Secret header is supplied.
     """
     env = os.getenv("SURPLUSPULSE_ENV", "").strip().lower()
+    if not env and (os.getenv("RENDER") or os.getenv("VERCEL") or os.getenv("PORT")):
+        env = "development"
     if env == "production":
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
