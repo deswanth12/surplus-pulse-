@@ -54,7 +54,7 @@ class Settings(BaseSettings):
     cache_directory_ttl_seconds: int = 300
     cache_mirage_ttl_seconds: int = 86400  # 24 hours
     api_key: Optional[str] = "surpluspulse-demo-key-2026"
-    admin_secret: Optional[str] = None
+    admin_secret: Optional[str] = "surpluspulse-demo-secret-2026"
 
     model_config = SettingsConfigDict(
         env_prefix="SURPLUSPULSE_",
