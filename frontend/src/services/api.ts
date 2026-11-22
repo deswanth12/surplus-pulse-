@@ -45,6 +45,11 @@ const DEMO_API_KEY =
   (typeof import.meta !== "undefined" && import.meta.env?.VITE_SURPLUSPULSE_API_KEY) ||
   "surpluspulse-demo-key-2026";
 
+const API_BASE_URL =
+  (typeof globalThis !== "undefined" && (globalThis as any).process?.env?.BACKEND_URL) ||
+  (typeof import.meta !== "undefined" && import.meta.env?.VITE_BACKEND_URL) ||
+  "";
+
 async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const customHeaders: Record<string, string> = {
     "X-API-Key": DEMO_API_KEY,
@@ -64,7 +69,8 @@ async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     }
   }
 
-  const res = await fetch(endpoint, {
+  const targetUrl = API_BASE_URL ? `${API_BASE_URL.replace(/\/$/, "")}${endpoint}` : endpoint;
+  const res = await fetch(targetUrl, {
     ...options,
     headers: customHeaders,
   });
