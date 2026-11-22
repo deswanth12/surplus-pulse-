@@ -260,6 +260,9 @@ export async function seedDatabase(
     `/api/seed?force=${force}`,
     {
       method: "POST",
+      headers: {
+        "X-Admin-Secret": "surpluspulse-demo-secret-2026",
+      },
     }
   );
 }
