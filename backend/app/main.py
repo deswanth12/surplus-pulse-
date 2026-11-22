@@ -22,8 +22,11 @@ from app.routers.seed import seed_endpoint
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
-    # Auto-seed initial test data only when SURPLUSPULSE_ENV is explicitly "development"
-    if os.getenv("SURPLUSPULSE_ENV", "").strip().lower() == "development":
+    env = os.getenv("SURPLUSPULSE_ENV", "").strip().lower()
+    if not env and (os.getenv("RENDER") or os.getenv("VERCEL") or os.getenv("PORT")):
+        env = "development"
+    # Auto-seed initial test data when in development/demo mode
+    if env == "development":
         seed_data(force=False)
     yield
 
