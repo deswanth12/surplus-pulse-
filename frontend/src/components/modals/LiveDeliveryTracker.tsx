@@ -137,10 +137,10 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
     >
       <div
         ref={modalRef}
-        className="w-full max-w-2xl bg-white text-stone-900 border border-stone-200 rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col my-6"
+        className="w-full max-w-2xl bg-white text-stone-900 border border-stone-200 rounded-2xl shadow-2xl overflow-hidden max-h-[min(90dvh,820px)] flex flex-col my-auto"
       >
         {/* Header */}
-        <header className="px-6 py-4 border-b border-light-outline-variant/50 flex items-start justify-between gap-4 bg-light-surface-container-low">
+        <header className="px-6 py-4 border-b border-light-outline-variant/50 flex items-start justify-between gap-4 bg-light-surface-container-low shrink-0">
           <div>
             <div className="flex items-center gap-2">
               <span className="size-8 rounded-md bg-light-primary text-light-on-primary flex items-center justify-center shadow-sm">
@@ -158,13 +158,13 @@ export const LiveDeliveryTracker: FC<LiveDeliveryTrackerProps> = ({
             type="button"
             onClick={onClose}
             aria-label="Close delivery tracker"
-            className="size-9 rounded-full bg-light-surface-container text-light-on-surface inline-flex items-center justify-center hover:bg-light-surface-container-high transition-colors cursor-pointer"
+            className="size-9 rounded-full bg-light-surface-container text-light-on-surface inline-flex items-center justify-center hover:bg-light-surface-container-high transition-colors cursor-pointer shrink-0"
           >
             <X className="size-4" />
           </button>
         </header>
 
-        <div className="p-6 overflow-y-auto flex flex-col gap-5">
+        <div className="p-6 overflow-y-auto flex-1 min-h-0 flex flex-col gap-5">
           {/* Real-time ETA & Distance Hero Banner with Dynamic Telemetry */}
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 bg-light-surface-container-low border border-light-outline-variant/60 rounded-xl p-4">
             <div>

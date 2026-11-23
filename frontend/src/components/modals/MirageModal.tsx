@@ -272,22 +272,22 @@ export const MirageModal: FC<MirageModalProps> = ({
     >
       <div
         ref={modalRef}
-        className="bg-white text-stone-900 rounded-2xl shadow-2xl border border-stone-200 max-w-4xl w-full overflow-hidden my-auto max-h-[92vh] flex flex-col"
+        className="bg-white text-stone-900 rounded-2xl shadow-2xl border border-stone-200 max-w-4xl w-full overflow-hidden my-auto max-h-[min(90dvh,840px)] flex flex-col"
       >
         {/* Header */}
         <div className="flex justify-between items-start border-b border-stone-200 p-5 sm:p-6 bg-white shrink-0">
           <div className="flex items-center gap-3">
             <div
-              className="h-10 w-10 bg-emerald-700 text-white rounded-xl shadow-sm flex items-center justify-center shrink-0"
+              className="size-10 bg-emerald-700 text-white rounded-xl shadow-sm flex items-center justify-center shrink-0"
               aria-hidden="true"
             >
-              <Camera className="h-5 w-5" />
+              <Camera className="size-5" />
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
                 <h2
                   id="mirage-modal-title"
-                  className="text-base sm:text-lg font-bold font-headline text-stone-900"
+                  className="text-base sm:text-lg font-bold font-headline text-stone-900 text-balance"
                 >
                   CIVIC FOOD HYGIENE SPECTROGRAPH • MIRAGE VLM (22MB ON-DEVICE)
                 </h2>
@@ -295,7 +295,7 @@ export const MirageModal: FC<MirageModalProps> = ({
                   22 MB ON-DEVICE
                 </span>
               </div>
-              <p className="text-xs text-stone-500 font-label mt-0.5">
+              <p className="text-xs text-stone-500 font-label mt-0.5 text-pretty">
                 Cactus Compute Mirage (51.3M Param) • Neural &quot;Food is Good or Gone&quot; Classifier • FSSAI Safe Matrix
               </p>
             </div>
@@ -306,12 +306,12 @@ export const MirageModal: FC<MirageModalProps> = ({
             className="text-stone-400 hover:text-stone-700 p-2 rounded-lg hover:bg-stone-100 transition-colors cursor-pointer"
             aria-label="Close Mirage VLM inspector dialog"
           >
-            <X className="h-5 w-5" aria-hidden="true" />
+            <X className="size-5" aria-hidden="true" />
           </button>
         </div>
 
         {/* Scrollable Content Body */}
-        <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1 overflow-x-hidden">
+        <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1 min-h-0 overflow-x-hidden">
           {/* Inline Error Banner */}
           {errorMessage && (
             <div

@@ -148,19 +148,19 @@ export const MatchModal: FC<MatchModalProps> = ({
     >
       <div
         ref={modalRef}
-        className="bg-white text-stone-900 border border-stone-200 shadow-2xl rounded-2xl max-w-lg w-full p-5 sm:p-6 space-y-4 my-8 max-h-[92vh] overflow-y-auto"
+        className="bg-white text-stone-900 border border-stone-200 shadow-2xl rounded-2xl max-w-lg w-full p-5 sm:p-6 space-y-4 my-auto max-h-[min(90dvh,820px)] overflow-y-auto"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-light-outline-variant/40 pb-3">
           <div>
             <h2
               id="match-order-title"
-              className="text-base sm:text-title-md font-bold font-headline text-light-on-surface flex items-center gap-2"
+              className="text-base sm:text-title-md font-bold font-headline text-light-on-surface flex items-center gap-2 text-balance"
             >
-              <Navigation className="h-5 w-5 text-light-primary" aria-hidden="true" />
+              <Navigation className="size-5 text-light-primary" aria-hidden="true" />
               <span>HAVERSINE PROXIMITY SMART DISPATCH ORDER</span>
             </h2>
-            <p className="text-xs text-light-on-surface-variant font-label mt-0.5">
+            <p className="text-xs text-light-on-surface-variant font-label mt-0.5 text-pretty">
               TARGET: {matchData.food_name} • {matchData.quantity_meals} MEALS AVAILABLE
             </p>
           </div>
@@ -170,7 +170,7 @@ export const MatchModal: FC<MatchModalProps> = ({
             className="text-light-on-surface-variant hover:text-light-on-surface p-1.5 rounded-md hover:bg-light-surface-container transition-colors cursor-pointer"
             aria-label="Close Smart Match dialog"
           >
-            <X className="h-5 w-5" aria-hidden="true" />
+            <X className="size-5" aria-hidden="true" />
           </button>
         </div>
 

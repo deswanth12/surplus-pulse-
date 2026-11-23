@@ -33,14 +33,16 @@ def is_production() -> bool:
 
 def get_expected_api_key() -> Optional[str]:
     """Retrieves the configured API key from environment or settings.
-    Never returns hardcoded fallback secrets.
+    Never returns hardcoded fallback secrets in production.
     """
     key = (
         os.getenv("SURPLUSPULSE_API_KEY")
         or os.getenv("APP_API_KEY")
         or os.getenv("API_KEY")
-        or getattr(settings, "api_key", None)
     )
+    if not key and not is_production():
+        key = getattr(settings, "api_key", None)
+
     if key and key.strip():
         return key.strip()
     return None

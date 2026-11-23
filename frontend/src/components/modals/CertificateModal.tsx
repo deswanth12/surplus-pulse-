@@ -116,7 +116,7 @@ export const CertificateModal: FC<CertificateModalProps> = ({
     >
       <div
         ref={modalRef}
-        className="bg-white text-stone-900 border border-stone-200 shadow-2xl rounded-2xl max-w-3xl w-full p-5 sm:p-7 space-y-5 my-8 max-h-[92vh] overflow-y-auto relative"
+        className="bg-white text-stone-900 border border-stone-200 shadow-2xl rounded-2xl max-w-3xl w-full p-5 sm:p-7 space-y-5 my-auto max-h-[min(90dvh,840px)] overflow-y-auto relative"
       >
         {/* Header with Seal and Close */}
         <div className="flex justify-between items-start border-b border-light-outline-variant/40 pb-4">
